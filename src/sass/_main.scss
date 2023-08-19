@@ -2,49 +2,44 @@
 
 @use "sass:math";
 
+html {
+    box-sizing: border-box;
+
+    font-size: 10px;
+    text-rendering: auto;
+}
+
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
-	// box-sizing: inherit;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
-
-	text-rendering: auto;
+    box-sizing: inherit;
 }
 
 body {
-	position: relative;
+    position: relative;
 
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	min-width: 32rem;
-	min-height: 100vh;
-	overflow-x: hidden;
+    min-width: 32rem;
+    min-height: 100vh;
+    overflow-x: hidden;
 
-	color: var(--color-text);
+    color: var(--color-text);
 
-	font-family: var(--font-family);
-	line-height: 1.5;
-	font-size: 1.6rem;
+    font-family: var(--font-family), sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
 
-	/*Перенос длинных слов*/
-	overflow-wrap: break-word;
-	word-wrap: break-word;
+    /*Перенос длинных слов*/
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
-	&.toggle {
-		height: 100vh;
-		overflow-y: hidden;
-	}
+    &.toggle {
+        height: 100vh;
+        overflow-y: hidden;
+    }
 }
 
 .visually-hidden {
